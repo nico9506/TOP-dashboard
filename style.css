@@ -1,0 +1,61 @@
+:root {
+    --color-light: lightgrey;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    --search-bar-h: 3.5rem;
+    --user-bar-h: 5rem;
+    --row: calc(calc(100vh - var(--search-bar-h) - var(--user-bar-h)) / 2);
+
+    display: grid;
+    grid-template: var(--search-bar-h) var(--user-bar-h) repeat(2, var(--row)) / 3fr 4fr 4fr 3fr;
+    grid-template-areas:
+        "dashboard nav nav nav"
+        "dashboard user user user"
+        "dashboard projects projects announcements"
+        "dashboard projects projects trending";
+}
+
+.container div {
+    border: 1px solid black;
+}
+
+/* .nav, .user-actions, .dashboard, .projects, .announcements, .trending {
+
+} */
+
+.nav {
+    background-color: aqua;
+    grid-area: nav;
+}
+
+.user-actions {
+    background-color: aquamarine;
+    grid-area: user;
+}
+
+.dashboard {
+    background-color: chartreuse;
+    grid-area: dashboard;
+}
+
+.projects {
+    background-color: darkkhaki;
+    grid-area: projects;
+}
+
+.announcements {
+    background-color: crimson;
+    grid-area: announcements;
+}
+
+.trending {
+    background-color: firebrick;
+    grid-area: trending;
+}
