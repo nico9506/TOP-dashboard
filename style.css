@@ -52,7 +52,7 @@ i:hover {
 
 .container {
     --search-bar-h: 4rem;
-    --user-bar-h: 5rem;
+    --user-bar-h: 5.2rem;
     --row: calc(calc(100vh - var(--search-bar-h) - var(--user-bar-h)) / 2);
 
     display: grid;
@@ -80,7 +80,6 @@ i:hover {
 
     display: grid;
     grid-template: 1fr / 3fr 2fr;
-    grid-template-areas: "search-bar user-menu";
 }
 
 .nav .nav-box form {
@@ -118,8 +117,60 @@ i:hover {
 
 /*----------------------------------------------------------*/
 .user-actions {
-    background-color: aquamarine;
+    background-color: var(--color-white);
     grid-area: user;
+    padding: 0 3rem;
+
+    display: grid;
+    grid-template: 2fr 3fr / 4.5rem 3fr 2fr;
+    grid-template-areas: 
+    "user-icon hi-there buttons"
+    "user-icon username buttons";
+}
+
+.user-actions .user-icon {
+    grid-area: user-icon;
+}
+
+.user-actions .user-icon a img {
+    width: 100%;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 10px var(--color-yellow) inset;
+    border: 5px solid var(--color-yellow);
+}
+
+.user-actions .hi-there {
+    grid-area: hi-there;
+    padding-left: 1rem;
+    align-self: flex-end;
+}
+
+.user-actions .username {
+    grid-area: username;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    font-size: var(--fs-medium-small);
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.user-actions .buttons {
+    grid-area: buttons;
+}
+
+.user-actions .buttons button {
+    background-color: var(--color-light-blue);
+    height: 2rem;
+    width: 5rem;
+    color: var(--color-white);
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    margin-left: 1rem;
+}
+
+.user-actions .buttons button:hover {
+    box-shadow: 0 0 1px 1px var(--color-light-blue);
 }
 /*----------------------------------------------------------*/
 
