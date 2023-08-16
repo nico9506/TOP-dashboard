@@ -1,8 +1,10 @@
 :root {
     --color-light: #d3d3d3;
-    --color-light-blue: #209cee;
+    --color-light-blue: #197bbd;
     --color-darker: #141414;
+    --color-dark: #505050;
     --color-yellow: #ffea00;
+    --color-orange: #ffc800;
     --color-white: #ffffff;
 
     --fs-larger: 2rem;
@@ -211,8 +213,59 @@ i:hover {
 
 /*----------------------------------------------------------*/
 .projects {
-    background-color: darkkhaki;
+    background-color: var(--color-light);
     grid-area: projects;
+
+    display: grid;
+    grid-template: 3rem 1fr / 1fr;
+}
+
+.projects .title-section {
+    grid-area: 1 / 1 / 1 / -1;
+    padding: 1.2rem 0 0 1rem;
+    font-weight: bold;
+}
+
+.projects .projects-container {
+    overflow: auto;
+    grid-area: 2 / 1 / 2 / -1;
+    display: grid;
+    grid-template: auto / repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    align-content: flex-start;
+    padding: 0 1rem;
+}
+
+.projects .projects-container .project-card {
+    padding-left: 0.5rem;
+    border-left: 10px outset var(--color-orange);
+    background-color: var(--color-white);
+    border-radius: 10px;
+    height: min(100%, 150px);
+}
+
+.projects .projects-container .project-card .card-content {
+    padding-right: 1rem;
+    height: 80%;
+}
+
+.projects .projects-container .project-card .card-content h4 {
+    margin-top: 1.2rem;
+    font-size: var(--fs-standard);
+}
+
+.projects .projects-container .project-card .card-content p {
+    font-size: var(--fs-smaller);
+    color: var(--color-dark);
+}
+
+.projects .projects-container .project-card .card-icons {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.projects .projects-container .project-card .card-icons i {
+    margin-right: 0.5rem;
 }
 /*----------------------------------------------------------*/
 
