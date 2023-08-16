@@ -1,7 +1,9 @@
 :root {
-    --color-light: lightgrey;
+    --color-light: #d3d3d3;
     --color-light-blue: #209cee;
-    --color-darker: rgb(20, 20, 20);
+    --color-darker: #141414;
+    --color-yellow: #ffea00;
+    --color-white: #ffffff;
 
     --fs-larger: 2rem;
     --fs-large: 1.8rem;
@@ -18,11 +20,38 @@
     margin: 0;
     padding: 0;
 
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
+.flex-a-center {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+@keyframes hover-action {
+    from {
+        font-size: var(--fs-medium-small);
+    }
+
+    to {
+        font-size: var(--fs-medium-large);
+    }
+}
+
+i:hover {
+    animation: hover-action 0.3s;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------*/
+
 .container {
-    --search-bar-h: 3.5rem;
+    --search-bar-h: 4rem;
     --user-bar-h: 5rem;
     --row: calc(calc(100vh - var(--search-bar-h) - var(--user-bar-h)) / 2);
 
@@ -45,8 +74,45 @@
 
 /*----------------------------------------------------------*/
 .nav {
-    background-color: aqua;
+    background-color: var(--color-white);
     grid-area: nav;
+    padding: 0 3rem;
+
+    display: grid;
+    grid-template: 1fr / 3fr 2fr;
+    grid-template-areas: "search-bar user-menu";
+}
+
+.nav .nav-box form {
+    width: 100%;
+}
+
+.nav .nav-box i {
+    font-size: var(--fs-medium-small);
+}
+
+.nav .nav-box button {
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 100%;
+    flex: 0;
+}
+
+.nav .nav-box input {
+    margin-left: 1rem;
+    height: var(--fs-medium-large);
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-light);
+    flex: 1;
+}
+
+.nav .nav-box a img {
+    height: 45px;
+    margin: 0 1.2rem;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 10px var(--color-yellow) inset;
+    border: 5px solid var(--color-yellow);
 }
 /*----------------------------------------------------------*/
 
@@ -66,8 +132,6 @@
 .dashboard h2 {
     height: fit-content;
     width: 100%;
-    display: flex;
-    align-items: center;
     color: var(--color-light);
     font-size: var(--fs-large);
 }
@@ -88,10 +152,9 @@
     grid-template: auto / 40px 1fr;
 }
 
-.dashboard .dashboard-box i, .dashboard .dashboard-box h3 {
+.dashboard .dashboard-box i,
+.dashboard .dashboard-box h3 {
     margin: 6px 0;
-    display: flex;
-    align-items: center;
 }
 /*----------------------------------------------------------*/
 

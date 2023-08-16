@@ -20,13 +20,33 @@
     </head>
     <body>
         <div class="container">
-            <div class="nav">Nav</div>
+            <div class="nav">
+                <div class="nav-box flex-a-center">
+                    <form class="flex-a-center" action="/action_page.php">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input
+                            type="text"
+                            placeholder="    Search.."
+                            name="search"
+                        />
+                    </form>
+                </div>
+                <div class="nav-box flex-a-center right">
+                    <i class="fa-regular fa-bell"></i>
+                    <a href="https://www.flaticon.com/free-stickers/animal" title="Animal stickers"><img src="media/cow.png" alt="cow sticker"></a>
+                    <h3>Nicolas Lopez</h3>
+                </div>
+            </div>
 
             <div class="user-actions">Morgan...</div>
 
             <div class="dashboard">
-                <h2><img src="favicon.ico" alt="icon" /> Dashboard</h2>
-                <div class="dashboard-box">
+                <h2 class="flex-a-center">
+                    <img src="favicon.ico" alt="icon" /> Dashboard
+                </h2>
+                <div class="dashboard-box flex-a-center">
                     <i class="fa-solid fa-igloo"></i>
                     <h3>Home</h3>
                     <i class="fa-solid fa-address-card"></i>
@@ -40,7 +60,7 @@
                     <i class="fa-solid fa-people-roof"></i>
                     <h3>Community</h3>
                 </div>
-                <div class="dashboard-box">
+                <div class="dashboard-box flex-a-center">
                     <i class="fa-solid fa-gears"></i>
                     <h3>Settings</h3>
                     <i class="fa-solid fa-headset"></i>
