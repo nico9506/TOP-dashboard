@@ -1,11 +1,24 @@
 :root {
     --color-light: lightgrey;
+    --color-light-blue: #209cee;
+    --color-darker: rgb(20, 20, 20);
+
+    --fs-larger: 2rem;
+    --fs-large: 1.8rem;
+    --fs-medium-large: 1.6rem;
+    --fs-medium: 1.4rem;
+    --fs-medium-small: 1.2rem;
+    --fs-standard: 1rem;
+    --fs-small: 0.9rem;
+    --fs-smaller: 0.8rem;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -30,32 +43,75 @@
 
 } */
 
+/*----------------------------------------------------------*/
 .nav {
     background-color: aqua;
     grid-area: nav;
 }
+/*----------------------------------------------------------*/
 
+/*----------------------------------------------------------*/
 .user-actions {
     background-color: aquamarine;
     grid-area: user;
 }
+/*----------------------------------------------------------*/
 
+/*----------------------------------------------------------*/
 .dashboard {
-    background-color: chartreuse;
+    background-color: var(--color-light-blue);
     grid-area: dashboard;
 }
 
+.dashboard h2 {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--color-light);
+    font-size: var(--fs-large);
+}
+
+.dashboard h2 img {
+    margin: 1rem;
+    box-shadow: 0 0 10px 2px var(--color-light);
+}
+
+.dashboard .dashboard-box {
+    color: var(--color-light);
+    font-weight: bold;
+    font-size: var(--fs-medium-small);
+    width: 100%;
+    margin: 1rem 0 2rem;
+    padding-left: 2rem;
+    display: grid;
+    grid-template: auto / 40px 1fr;
+}
+
+.dashboard .dashboard-box i, .dashboard .dashboard-box h3 {
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+}
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
 .projects {
     background-color: darkkhaki;
     grid-area: projects;
 }
+/*----------------------------------------------------------*/
 
+/*----------------------------------------------------------*/
 .announcements {
     background-color: crimson;
     grid-area: announcements;
 }
+/*----------------------------------------------------------*/
 
+/*----------------------------------------------------------*/
 .trending {
     background-color: firebrick;
     grid-area: trending;
 }
+/*----------------------------------------------------------*/
