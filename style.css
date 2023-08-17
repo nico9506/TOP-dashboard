@@ -66,9 +66,9 @@ i:hover {
         "dashboard projects projects trending";
 }
 
-.container div {
+/* .container div {
     border: 1px solid black;
-}
+} */
 
 /* .nav, .user-actions, .dashboard, .projects, .announcements, .trending {
 
@@ -269,6 +269,14 @@ i:hover {
 }
 /*----------------------------------------------------------*/
 
+.whitebox-container {
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    overflow: auto;
+}
+
 /*----------------------------------------------------------*/
 .announcements {
     background-color: var(--color-light);
@@ -276,17 +284,95 @@ i:hover {
 
     display: grid;
     grid-template: 2rem auto / 1fr;
-    overflow: auto;
+    /* overflow: auto; */
+    padding: 1rem;
 }
 
 .announcements .title-section {
     grid-area: 1 / 1 / 1 / 1;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.announcements .announcement {
+    margin-bottom: 0.2rem;
+}
+
+.announcements .announcement .title-announcement {
+    font-size: var(--fs-small);
+}
+
+.announcements .announcement p {
+    /* padding: 0.5rem 0 0; */
+    font-size: var(--fs-smaller);
 }
 /*----------------------------------------------------------*/
 
 /*----------------------------------------------------------*/
 .trending {
-    background-color: firebrick;
+    background-color: var(--color-light);
     grid-area: trending;
+
+    display: grid;
+    grid-template: 2rem auto / 1fr;
+    /* overflow: auto; */
+    padding: 1rem;
+}
+
+.trending .title-section {
+    grid-area: 1 / 1 / 1 / 1;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.trending .announcement {
+    margin-bottom: 0.2rem;
+    display: grid;
+    grid-template: 1fr 1fr / 70px 1fr;
+    grid-template-areas: 
+    "sticker title"
+    "sticker description";
+}
+
+.trending .announcement a {
+    grid-area: sticker;
+}
+
+.trending .announcement a img {
+    width: 60px;
+    border-radius: 100%;
+    
+}
+
+.trending .announcement .title-announcement {
+    font-size: var(--fs-small);
+    grid-area: title;
+    align-self: flex-end;
+}
+
+.trending .announcement p {
+    /* padding: 0.5rem 0 0; */
+    font-size: var(--fs-smaller);
+    grid-area: description;
 }
 /*----------------------------------------------------------*/
+img.pink-circle {
+    box-shadow: 0 0 10px 10px rgb(251, 130, 200) inset;
+    border: 5px solid rgb(251, 130, 200);
+}
+
+img.yellow-circle {
+    box-shadow: 0 0 10px 10px var(--color-yellow) inset;
+    border: 5px solid var(--color-yellow);
+}
+
+img.grey-circle {
+    box-shadow: 0 0 10px 10px rgb(156, 143, 145) inset;
+    border: 5px solid rgb(156, 143, 145);
+}
+
+img.blue-circle {
+    box-shadow: 0 0 10px 10px var(--color-light-blue) inset;
+    border: 5px solid var(--color-light-blue);
+}
+
