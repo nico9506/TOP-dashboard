@@ -317,7 +317,9 @@ i:hover {
 }
 
 .announcements .announcement {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-light);
 }
 
 .announcements .announcement .title-announcement {
